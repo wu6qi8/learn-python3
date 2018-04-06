@@ -24,3 +24,13 @@ print(x, y)
 
 # TypeError: bad operand type:
 my_abs('123')
+
+def quadratic(a, b, c):
+    if isinstance(a, (int, float)) and isinstance(b, (int, float)) and isinstance(c, (int, float)):
+        delta=b*b-4*a*c
+        if delta>=0:
+            x1=(-b+math.sqrt(delta))/(2*a)
+            x2=(-b-math.sqrt(delta))/(2*a)
+            return x1, x2
+        else:
+            print('There\'s no valid solutions.')
